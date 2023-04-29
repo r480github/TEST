@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<div class="cursor"></div>
+<div class="area">
+  <ul class="circles">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+</div>
+</main>
+
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet" />
+
+<html Land="en">
+
+  <head>
+    <form action="Main.html"><button class="logo">Galaxy</button></form>
+    <div class="heading">
+      <form action="Main.html"><button class="Homebtn"><b>Home</b></button></form>
+    </div>
+
+    <div class="heading">
+      <form action="Games.html">
+        <button class="Games"><b>Games</b></button>
+      </form>
+    </div>
+    <form action="Apps.html">
+      <button class="Apps"><b>Apps</b></button>
+    </form>
+
+
+    <title>Galaxy</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="Home.css" />
+  </head>
+  <div id="blob"></div>
+  <script src="index.js"></script>
+
+  <body>
+
+    </div>
+  </body>
+
+</html>
+<div class="containerB">
+
+
+  <div class="layout">
+    <form action="Apps/Nebula.html" onclick="alerter2()">
+      <input type="image" src="img/Nebula.png" class="GAMESEC" id="saveForm" />
+    </form>
+  </div>
+
+  <div class="layout">
+    <form action="Apps/Incognito.html" onclick="alerter2()">
+      <input type="image" src="img/Incognito.png" class="GAMESEC" id="saveForm" />
+    </form>
+  </div>
+
+  <div class="layout">
+    <button onclick="Open()">
+      <input type="image" src="img/Interstellar.png" class="GAMESEC" id="saveForm" />
+    </button>
+  </div>
+
+  <div class="layout">
+    <form action="Apps/Ultraviolet.html" onclick="alerter2()">
+      <input type="image" src="img/Ultraviolet.png" class="GAMESEC" id="saveForm" />
+    </form>
+  </div>
+
+  <div class="layout">
+    <form action="Apps/Hypertabs.html" onclick="alerter2()">
+      <input type="image" src="img/Hypertabs.png" class="GAMESEC" id="saveForm" />
+    </form>
+  </div>
+
+
+  <div class="layout">
+    <form onclick="Spotify()">
+      <input type="image" src="img/Spotify.png" class="GAMESEC" id="saveForm" />
+    </form>
+  </div>
+
+
+</div>
+<script>
+  function Open(){
+  var url =  'https://interstellar-tqxt.onrender.com/';
+window.open(url, '_blank');
+  }
+
+</script>
+
+
+<script>
+function Spotify(){
+  var url =  'https://spotifyiscool2.glitch.me/service/hvtrs8%2F-orel.qpmtkf%7B.aoo%2F';
+window.open(url, '_blank');
+  }
+</script>
+
+<script>
+  function alerter2(){
+    alert('IMPORTANT: Press SHIFT + B to return to Game Page')
+  }
+</script>
+<style>
+  *{
+    cursor: none;
+  }
+</style>
+<script>
+  const cursor = document.querySelector('.cursor');
+
+window.addEventListener('mousemove', (e) => {
+  cursor.style.left = e.pageX + 'px';
+  cursor.style.top = e.pageY + 'px';
+  cursor.setAttribute('data-fromTop', (cursor.offsetTop - scrollY));
+  // console.log(e)
+});
+window.addEventListener('scroll', () => {
+  const fromTop = cursor.getAttribute('data-fromTop');
+  cursor.style.top = scrollY + parseInt(fromTop) + 'px';
+  console.log(scrollY);
+});
+window.addEventListener('click', () => {
+  if (cursor.classList.contains('click')) {
+    cursor.classList.remove("click");
+    void cursor.offsetWidth; // trigger a DOM reflow
+    cursor.classList.add("click");
+  } else {
+    cursor.classList.add("click");
+  }
+});
+</script>

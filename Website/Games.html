@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<div class="cursor"></div>
+<div class="area">
+  <ul class="circles">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+</div>
+</main>
+<style>
+  body{
+    overflow:visible;
+  }
+</style>
+
+<script>
+  function alerter2(){
+    alert('IMPORTANT: Press SHIFT + B to return to Game Page')
+  }
+</script>
+<style>
+  *{
+    cursor: none;
+  }
+</style>
+<script>
+  //CURSOR CSS
+  const cursor = document.querySelector('.cursor');
+
+window.addEventListener('mousemove', (e) => {
+  cursor.style.left = e.pageX + 'px';
+  cursor.style.top = e.pageY + 'px';
+  cursor.setAttribute('data-fromTop', (cursor.offsetTop - scrollY));
+  // console.log(e)
+});
+window.addEventListener('scroll', () => {
+  const fromTop = cursor.getAttribute('data-fromTop');
+  cursor.style.top = scrollY + parseInt(fromTop) + 'px';
+  console.log(scrollY);
+});
+window.addEventListener('click', () => {
+  if (cursor.classList.contains('click')) {
+    cursor.classList.remove("click");
+    void cursor.offsetWidth; // trigger a DOM reflow
+    cursor.classList.add("click");
+  } else {
+    cursor.classList.add("click");
+  }
+});
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet" />
+
+<html Land="en">
+
+  <head>
+      <li><button
+      onclick="window.location.href='Main.html';"  class="logo" id="saveForm"> Galaxy
+      </button>
+      </li>
+  
+      <li><button
+        onclick="window.location.href='Main.html';"  class="Homebtn" id="saveForm"> Home
+        </button>
+        </li>
+      
+        <li><button
+          onclick="window.location.href='Games.html';"  class="Games" id="saveForm"> Games
+          </button>
+          </li>
+    
+         <!-- <li><button
+            onclick="window.location.href='Apps.html';"  class="Apps" id="saveForm"> Apps
+            </button>
+            </li>
+      -->
+
+    <title>Galaxy</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="Home.css" />
+  </head>
+  <div id="blob"></div>
+  <script src="index.js">
+    document.addEventListener("DOMContentLoaded", function() {
+  var lazyloadImages;    
+
+  if ("IntersectionObserver" in window) {
+    lazyloadImages = document.querySelectorAll(".lazy");
+    var imageObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          var image = entry.target;
+          image.src = image.dataset.src;
+          image.classList.remove("lazy");
+          imageObserver.unobserve(image);
+        }
+      });
+    });
+
+    lazyloadImages.forEach(function(image) {
+      imageObserver.observe(image);
+    });
+  } else {  
+    var lazyloadThrottleTimeout;
+    lazyloadImages = document.querySelectorAll(".lazy");
+    
+    function lazyload () {
+      if(lazyloadThrottleTimeout) {
+        clearTimeout(lazyloadThrottleTimeout);
+      }    
+
+      lazyloadThrottleTimeout = setTimeout(function() {
+        var scrollTop = window.pageYOffset;
+        lazyloadImages.forEach(function(img) {
+            if(img.offsetTop < (window.innerHeight + scrollTop)) {
+              img.src = img.dataset.src;
+              img.classList.remove('lazy');
+            }
+        });
+        if(lazyloadImages.length == 0) { 
+          document.removeEventListener("scroll", lazyload);
+          window.removeEventListener("resize", lazyload);
+          window.removeEventListener("orientationChange", lazyload);
+        }
+      }, 20);
+    }
+
+    document.addEventListener("scroll", lazyload);
+    window.addEventListener("resize", lazyload);
+    window.addEventListener("orientationChange", lazyload);
+  }
+})
+
+
+  </script>
+
+  <body>
+
+    </div>
+  </body>
+
+</html>
+  <div class="layout">
+    <input  
+onclick="window.location.href='Game Webpage/1v1.html';"  type="image" src="img/1v1.png" class="lazy" id="saveForm">
+    </input>
+  </div>
+
+  <div class="layout">
+    <input  
+onclick="window.location.href='Game Webpage/ADarkRoom/index.html';"  type="image" src="img/ADarkRoom.webp" class="lazy" id="saveForm">
+    </input>
+  </div>
+
+  <div class="layout">
+    <input  
+onclick="window.location.href='Game Webpage/Arena.html';"  type="image" src="img/Arena.webp" class="lazy" id="saveForm">
+    </input>
+  </div>
+
+  <div class="layout">
+    <input  
+onclick="window.location.href='Game Webpage/Asteroids/index.html';"  type="image" src="img/Asteroids.png" class="lazy" id="saveForm">
+    </input>
+  </div>
+
+
+  <div class="layout">
+    <input  
+onclick="window.location.href='Game Webpage/Blackholesquare/index.html';"  type="image" src="img/BlackHole.jpg" class="lazy" id="saveForm">
+    </input>
+  </div>
+
+  <div class="layout">
+    <input  
+onclick="window.location.href='Game Webpage/Bounceback/index.html';"  type="image" src="img/BounceBack.png" class="lazy" id="saveForm">
+    </input>
+  </div>
+
+
+  <div class="layout">
+    <input  
+onclick="window.location.href='Game Webpage/Breaklock/index.html';"  type="image" src="img/BreakLock.jpeg" class="lazy" id="saveForm">
+    </input>
+  </div>
+
+  <div class="layout">
+    <input  
+onclick="window.location.href='Game Webpage/Breakout/index.html';"  type="image" src="img/BreakOut.png" class="lazy" id="saveForm">
+    </input>
+  </div>
+
+  <div class="layout">
+    <input  
+onclick="window.location.href='Game Webpage/COD.html';"  type="image" src="img/COD.png" class="lazy" id="saveForm">
+    </input>
+  </div>
+
+  <div class="layout">
+    <input  
+onclick="window.location.href='Game Webpage/chess-ai/index.html';"  type="image" src="img/Chess.png" class="lazy" id="saveForm">
+    </input>
+  </div>
+
+  <div class="layout">
+    <input  
+onclick="window.location.href='Game Webpage/CookieClicker/index.html';"  type="image" src="img/CookieClicker.png" class="lazy" id="saveForm">
+    </input>
+  </div>
+
+  <div class="layout">
+    <input  
+onclick="window.location.href='Game Webpage/drivemad/index.html';"  type="image" src="img/DriveMad.png" class="lazy" id="saveForm">
+    </input>
+  </div>
+
+  <div class="layout">
+    <input  
+onclick="window.location.href='Game Webpage/HexGL.html';"  type="image" src="img/HexGL.jpeg" class="lazy" id="saveForm">
+    </input>
+  </div>
+
+  <div class="layout">
+    <input  
+onclick="window.location.href='Game Webpage/hilldraw/index.html';"  type="image" src="img/HillDraw.png" class="lazy" id="saveForm">
+    </input>
+  </div>
+
+  <div class="layout">
+    <input  
+onclick="window.location.href='Game Webpage/JustFall.html';"  type="image" src="img/JustFall.jpg" class="lazy" id="saveForm">
+    </input>
+  </div>
+
+  <div class="layout">
+    <input  
+onclick="window.location.href='Game Webpage/Ninja/index.html';"  type="image" src="img/1v1.png" class="lazy" id="saveForm">
+    </input>
+  </div>
+
+  <div class="layout">
+    <input  
+onclick="window.location.href='Game Webpage/PixelCombat.html';"  type="image" src="img/PixelCombat.jpeg" class="lazy" id="saveForm">
+    </input>
+  </div>
+
+  <div class="layout">
+    <input  
+onclick="window.location.href='Game Webpage/Radiusraid/index.html';"  type="image" src="img/RadiusRaid.jpg" class="lazy" id="saveForm">
+    </input>
+  </div>
+  
+   <div class="layout">
+    <input  
+onclick="window.location.href='Game Webpage/ShellShockers.html';"  type="image" src="img/ShellShockers.jpeg" class="lazy" id="saveForm">
+    </input>
+  </div>
+
+  <div class="layout">
+    <input  
+onclick="window.location.href='Game Webpage/Slope.html';"  type="image" src="img/Slope.png" class="lazy" id="saveForm">
+    </input>
+  </div>
+
+  <div class="layout">
+    <input  
+onclick="window.location.href='Game Webpage/SnowRider.html';"  type="image" src="img/SnowRider.jpeg" class="lazy" id="saveForm">
+    </input>
+  </div>
+
+  <div class="layout">
+    <input  
+onclick="window.location.href='Game Webpage/supermario/index.html';"  type="image" src="img/Mario.webp" class="lazy" id="saveForm">
+    </input>
+  </div>
+
+  <div class="layout">
+    <input  
+onclick="window.location.href='Game Webpage/Tetris/index.html';"  type="image" src="https://m.media-amazon.com/images/I/61M3rDwh4qL.png" class="lazy" id="saveForm">
+    </input>
+  </div>
+
+  <div class="layout">
+    <input  
+onclick="window.location.href='Game Webpage/Vex3.html';"  type="image" src="img/Vex3.jpg" class="lazy" id="saveForm">
+    </input>
+  </div>
+
+  <div class="layout">
+    <input  
+onclick="window.location.href='Game Webpage/Vex4.html';"  type="image" src="img/Vex4.jpg" class="lazy" id="saveForm">
+    </input>
+  </div>
+
+  <div class="layout">
+    <input  
+onclick="window.location.href='Game Webpage/Vex5.html';"  type="image" src="img/Vex5.jpg" class="lazy" id="saveForm">
+    </input>
+  </div>
+
+  <div class="layout">
+    <input  
+onclick="window.location.href='Game Webpage/wordle/index.html';"  type="image" src="img/Wordle.png" class="lazy" id="saveForm">
+    </input>
+  </div>
+
+  <div class="layout">
+    <input  
+onclick="window.location.href='Game Webpage/xx142-b2exe/index.html';"  type="image" src="img/xx142-b2exe.jpg" class="lazy" id="saveForm">
+    </input>
+  </div>
