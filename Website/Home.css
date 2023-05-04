@@ -1,0 +1,314 @@
+/*CURSOR CSS*/
+.cursor{
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* border: 2px solid white; */
+  /* background-color: rgba(255, 255, 255, 0.356); */
+  height: 30px;
+  width: 30px;
+  border-radius: 50px;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 400;
+}
+.cursor::after,.cursor::before{
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #0bd97c;
+  height: 33px;
+  width: 33px;
+  border-radius: 50px;
+}
+.cursor::before{
+  background-color: #0bd97c;
+}
+.cursor.click::before{
+  animation: click 1.2s ease  backwards;
+}
+@keyframes click{
+ 0%{
+    opacity: 1;
+    transform:translate(-50%, -50%) scale(1);
+ }
+ 100%{
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(8);
+ }
+}
+/*END OF CURSOR CSS*/
+
+/*APP BUTTON*/
+.Apps {
+    position: relative;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: white;
+    background-color: transparent;
+    font-size: 30px;
+    border-color: transparent;
+    left: 68%;
+    top: -95px;
+    transition-duration: 0.5s;
+    z-index: 100;
+    margin-top: -300px;
+  
+  }
+  
+  .Apps:Hover {
+    background-color: #101111;
+  
+  }
+  
+  
+  /*    GAME PAGE BACKGROUND EFFECT    */
+  * {
+    padding: 0;
+    margin: 0;
+  }
+  
+  canvas {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    z-index: -500;
+    margin-top: -160px;
+  }
+  
+  
+  
+  #hero {
+    width: 100%;
+    height: 100vh;
+    margin: top 0px;
+    z-index: -500;
+  }
+  
+  #hero .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: -500;
+  }
+  
+  /* END OF GAME PAGE BACKGROUND EFFECT*/
+  
+  
+  body {
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #2C5364, #203A43, #0F2027);
+    height: 100vh;
+    width: 100%;
+    z-index: -500;
+  }
+  
+  .circles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200%;
+    overflow: hidden;
+  }
+  
+  
+  /*     CURSOR EFFECT     */
+  
+  @keyframes rotate {
+    from {
+      rotate: 0deg;
+    }
+  
+    to {
+      rotate: 360deg;
+    }
+  }
+  
+  #blob {
+    height: 20vmax;
+    aspect-ratio: 1;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    border-radius: 50%;
+    background: linear-gradient(to right, aquamarine, mediumpurple);
+    animation: rotate 20s infinite;
+    opacity: 0.8;
+    z-index: 98;
+    transition: 1s ease-out;
+    filter: blur(10vmax);
+  }
+  
+  
+  .Homebtn {
+    position: relative;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: white;
+    background-color: transparent;
+    font-size: 30px;
+    border-color: transparent;
+    left: 52%;
+    bottom: 19px;
+    transition-duration: 0.5s;
+    z-index: 100;
+    top: -28px;
+  }
+  
+  .Homebtn:Hover {
+    background-color: #101111;
+  }
+  
+  .logo {
+    position: relative;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: white;
+    background-color: transparent;
+    margin-left: 20px;
+    font-size: 50px;
+    border-color: transparent;
+    transition-duration: 0.3s;
+    top: 20px;
+    z-index: 100;
+    margin-top: -4;
+  }
+  
+  .logo:Hover {
+    color: purple;
+    transition-duration: 0.3s;
+  }
+  
+  .Games {
+    position: relative;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: white;
+    background-color: transparent;
+    font-size: 30px;
+    border-color: transparent;
+    left: 60%;
+    top: -70px;
+    transition-duration: 0.5s;
+    z-index: 100;
+  
+  
+  }
+  
+  .Games:Hover {
+    background-color: #101111;
+  
+  }
+  
+  /*     START OF GAME CSS     */
+  .lazy {
+    position: relative;
+    width: 170px;
+    height: auto;
+    transition-duration: 0.3s;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    background-color: transparent;
+    z-index: 100;
+    float: left;
+    vertical-align: middle;
+    
+  }
+  
+  .lazy:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    -webkit-transform: scale(2.2);
+    transform: scale(1.2);
+    z-index: 100;
+  }
+  
+  .layout {
+    float: left;
+    padding: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 40px;
+    padding-top: 0px;
+  
+  }
+  
+  /*END OF GAME CSS*/
+
+
+  /*WELCOME SCREEN*/
+  #hero .content {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  #hero .content h1 {
+    text-align: center;
+    font-size: 55px;
+    color: cyan;
+    width: clamp(300px, 60vw, 80%);
+    margin-bottom: 2rem;
+    opacity: 0;
+    animation: goUp 1s cubic-bezier(0, 0.55, 0.45, 1) forwards;
+  }
+  .text-highlight {
+    position: relative;
+    z-index: 5;
+    color: #937dff;
+    text-shadow: 1px 2px 10px #555;
+  }
+  .text-highlight:after {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 30px;
+    background: #fc466b; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #00d2ff, hsla(181, 100%, 44%, 1)); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to right,
+      #00d2ff,
+      hsla(181, 100%, 44%, 1)
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    opacity: 0.5;
+    z-index: -1;
+    animation: fullWidth 1s cubic-bezier(0, 0.55, 0.45, 1) 0.5s forwards;
+  }
+  @keyframes fullWidth {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+  @keyframes goUp {
+    0% {
+      opacity: 0;
+      transform: translateY(150px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
